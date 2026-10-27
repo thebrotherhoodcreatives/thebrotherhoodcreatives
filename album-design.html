@@ -3,7 +3,16 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Album Designing — Designer</title>
+<title>Wedding Album Design &amp; Album Layouts | The Brotherhood Creatives</title>
+<meta name="description" content="Wedding, engagement and portrait album design by The Brotherhood Creatives. Browse our album layouts and portfolio PDFs." />
+<link rel="canonical" href="https://thebrotherhoodcreatives.in/album-design" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="The Brotherhood Creatives" />
+<meta property="og:title" content="Wedding Album Design | The Brotherhood Creatives" />
+<meta property="og:description" content="Hand-designed wedding and portrait album layouts. Browse our album sheets and portfolio PDFs." />
+<meta property="og:url" content="https://thebrotherhoodcreatives.in/album-design" />
+<meta property="og:image" content="https://thebrotherhoodcreatives.in/A1.webp" />
+<meta name="twitter:card" content="summary_large_image" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
@@ -993,6 +1002,7 @@
     .footer-bottom { flex-direction: column; gap: 10px; text-align: center; }
     .footer-bottom-links { justify-content: center; }
   }
+  .pdf-card:focus-visible,.carousel-item:focus-visible,.nav a:focus-visible,.hamburger:focus-visible,.btn-book:focus-visible,.btn-outline:focus-visible{outline:2px solid #e24a4a;outline-offset:3px}
 </style>
 </head>
 <body>
@@ -1000,18 +1010,19 @@
 <header>
   <nav class="nav" id="mainNav">
     <div class="nav-inner">
-      <a href="karthicks-photography.html" class="nav-logo">
-        <img src="logo.jpeg" alt="Designer Portfolio" loading="eager" decoding="async" fetchpriority="high" style="width:auto;display:block;object-fit:contain;mix-blend-mode:multiply;" />
+      <a href="index.html" class="nav-logo" aria-label="The Brotherhood Creatives home">
+        <img src="logo.jpeg" alt="The Brotherhood Creatives" loading="eager" decoding="async" fetchpriority="high" style="width:auto;display:block;object-fit:contain;mix-blend-mode:multiply;" />
       </a>
       <div class="nav-right">
         <ul class="nav-links" id="navLinks">
+          <li><a href="index.html">Agency Home</a></li>
           <li><a href="#portfolio-pdfs" onclick="closeMenu()">Portfolio</a></li>
           <li><a href="#gallery" onclick="closeMenu()">Works</a></li>
           <li><a href="#about" onclick="closeMenu()">About</a></li>
           <li><a href="#contact" onclick="closeMenu()">Contact</a></li>
         </ul>
         <a href="#contact" class="btn-book">Book Now</a>
-        <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Toggle menu">
+        <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
           <span></span><span></span><span></span>
         </button>
       </div>
@@ -1059,28 +1070,28 @@
       <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
     </button>
     <div class="carousel-track" id="galleryTrack">
-      <div class="carousel-item" onclick="openPhotoPreview('A1.webp')">
+      <div class="carousel-item" role="button" tabindex="0" onclick="openPhotoPreview('A1.webp')">
         <img src="A1.webp" alt="Album Sheet 01" loading="lazy" decoding="async" fetchpriority="low" />
       </div>
-      <div class="carousel-item" onclick="openPhotoPreview('A2.webp')">
+      <div class="carousel-item" role="button" tabindex="0" onclick="openPhotoPreview('A2.webp')">
         <img src="A2.webp" alt="Album Sheet 02" loading="lazy" decoding="async" fetchpriority="low" />
       </div>
-      <div class="carousel-item" onclick="openPhotoPreview('E1.webp')">
+      <div class="carousel-item" role="button" tabindex="0" onclick="openPhotoPreview('E1.webp')">
         <img src="E1.webp" alt="Album Sheet 03" loading="lazy" decoding="async" fetchpriority="low" />
       </div>
-      <div class="carousel-item" onclick="openPhotoPreview('E2.webp')">
+      <div class="carousel-item" role="button" tabindex="0" onclick="openPhotoPreview('E2.webp')">
         <img src="E2.webp" alt="Album Sheet 04" loading="lazy" decoding="async" fetchpriority="low" />
       </div>
-      <div class="carousel-item" onclick="openPhotoPreview('G1.webp')">
+      <div class="carousel-item" role="button" tabindex="0" onclick="openPhotoPreview('G1.webp')">
         <img src="G1.webp" alt="Album Sheet 05" loading="lazy" decoding="async" fetchpriority="low" />
       </div>
-      <div class="carousel-item" onclick="openPhotoPreview('G2.webp')">
+      <div class="carousel-item" role="button" tabindex="0" onclick="openPhotoPreview('G2.webp')">
         <img src="G2.webp" alt="Album Sheet 06" loading="lazy" decoding="async" fetchpriority="low" />
       </div>
-      <div class="carousel-item" onclick="openPhotoPreview('Y1.webp')">
+      <div class="carousel-item" role="button" tabindex="0" onclick="openPhotoPreview('Y1.webp')">
         <img src="Y1.webp" alt="Album Sheet 07" loading="lazy" decoding="async" fetchpriority="low" />
       </div>
-      <div class="carousel-item" onclick="openPhotoPreview('Y3.webp')">
+      <div class="carousel-item" role="button" tabindex="0" onclick="openPhotoPreview('Y3.webp')">
         <img src="Y3.webp" alt="Album Sheet 08" loading="lazy" decoding="async" fetchpriority="low" />
       </div>
     </div>
@@ -1093,7 +1104,7 @@
 <div class="photo-modal" id="photoModal" onclick="closePhotoPreview()">
   <button class="photo-modal-close" onclick="closePhotoPreview()">✕</button>
   <div class="modal-loader" id="photoModalLoader" aria-hidden="true"></div>
-  <img class="photo-modal-content" id="modalTargetImg" src="" alt="Full Preview" loading="eager" decoding="async" onclick="event.stopPropagation()" />
+  <img class="photo-modal-content" id="modalTargetImg" src="" alt="Enlarged preview" loading="eager" decoding="async" onclick="event.stopPropagation()" />
 </div>
 
 <section class="pdf-section" id="portfolio-pdfs">
@@ -1105,7 +1116,7 @@
     </div>
     <div class="pdf-grid fade-up">
 
-      <div class="pdf-card" onclick="openPdf('Birthday Album', '01.pdf')" onmouseenter="prefetchPdf('01.pdf')" ontouchstart="prefetchPdf('01.pdf')">
+      <div class="pdf-card" role="button" tabindex="0" onclick="openPdf('Birthday Album', '01.pdf')" onmouseenter="prefetchPdf('01.pdf')" ontouchstart="prefetchPdf('01.pdf')">
         <div class="pdf-thumb pdf-thumb--image">
           <img class="pdf-thumb-img" src="thumbnail1.jpg" alt="Birthday Album" loading="lazy" decoding="async" fetchpriority="low">
           <div class="pdf-badge">PDF</div>
@@ -1127,7 +1138,7 @@
         </div>
       </div>
 
-      <div class="pdf-card" onclick="openPdf('Puberty Album', '02.pdf')" onmouseenter="prefetchPdf('02.pdf')" ontouchstart="prefetchPdf('02.pdf')">
+      <div class="pdf-card" role="button" tabindex="0" onclick="openPdf('Puberty Album', '02.pdf')" onmouseenter="prefetchPdf('02.pdf')" ontouchstart="prefetchPdf('02.pdf')">
         <div class="pdf-thumb pdf-thumb--image">
           <img class="pdf-thumb-img" src="thumbnail2.jpg" alt="Puberty Album" loading="lazy" decoding="async" fetchpriority="low">
           <div class="pdf-badge">PDF</div>
@@ -1149,7 +1160,7 @@
         </div>
       </div>
 
-      <div class="pdf-card" onclick="openPdf('Engagement Album', '03.pdf')" onmouseenter="prefetchPdf('03.pdf')" ontouchstart="prefetchPdf('03.pdf')">
+      <div class="pdf-card" role="button" tabindex="0" onclick="openPdf('Engagement Album', '03.pdf')" onmouseenter="prefetchPdf('03.pdf')" ontouchstart="prefetchPdf('03.pdf')">
         <div class="pdf-thumb pdf-thumb--image">
           <img class="pdf-thumb-img" src="thumbnail3.jpg" alt="Engagement Album" loading="lazy" decoding="async" fetchpriority="low">
           <div class="pdf-badge">PDF</div>
@@ -1171,7 +1182,7 @@
         </div>
       </div>
 
-      <div class="pdf-card" onclick="openPdf('Outdoor Album', '04.pdf')" onmouseenter="prefetchPdf('04.pdf')" ontouchstart="prefetchPdf('04.pdf')">
+      <div class="pdf-card" role="button" tabindex="0" onclick="openPdf('Outdoor Album', '04.pdf')" onmouseenter="prefetchPdf('04.pdf')" ontouchstart="prefetchPdf('04.pdf')">
         <div class="pdf-thumb pdf-thumb--image">
           <img class="pdf-thumb-img" src="thumbnail4.jpg" alt="Outdoor Album" loading="lazy" decoding="async" fetchpriority="low">
           <div class="pdf-badge">PDF</div>
@@ -1194,7 +1205,7 @@
         </div>
       </div>
 
-      <div class="pdf-card" onclick="openPdf('Wedding Album — Vol 1', '05.pdf')" onmouseenter="prefetchPdf('05.pdf')" ontouchstart="prefetchPdf('05.pdf')">
+      <div class="pdf-card" role="button" tabindex="0" onclick="openPdf('Wedding Album — Vol 1', '05.pdf')" onmouseenter="prefetchPdf('05.pdf')" ontouchstart="prefetchPdf('05.pdf')">
         <div class="pdf-thumb pdf-thumb--image">
           <img class="pdf-thumb-img" src="thumbnail5.jpg" alt="Wedding Album — Vol 1" loading="lazy" decoding="async" fetchpriority="low">
           <div class="pdf-badge">PDF</div>
@@ -1216,7 +1227,7 @@
         </div>
       </div>
 
-      <div class="pdf-card" onclick="openPdf('Wedding Album — Vol 2', '06.pdf')" onmouseenter="prefetchPdf('06.pdf')" ontouchstart="prefetchPdf('06.pdf')">
+      <div class="pdf-card" role="button" tabindex="0" onclick="openPdf('Wedding Album — Vol 2', '06.pdf')" onmouseenter="prefetchPdf('06.pdf')" ontouchstart="prefetchPdf('06.pdf')">
         <div class="pdf-thumb pdf-thumb--image">
           <img class="pdf-thumb-img" src="thumbnail6.jpg" alt="Wedding Album — Vol 2" loading="lazy" decoding="async" fetchpriority="low">
           <div class="pdf-badge">PDF</div>
@@ -1238,7 +1249,7 @@
         </div>
       </div>
 
-      <div class="pdf-card" onclick="openPdf('Wedding Album — Vol 3', '07.pdf')" onmouseenter="prefetchPdf('07.pdf')" ontouchstart="prefetchPdf('07.pdf')">
+      <div class="pdf-card" role="button" tabindex="0" onclick="openPdf('Wedding Album — Vol 3', '07.pdf')" onmouseenter="prefetchPdf('07.pdf')" ontouchstart="prefetchPdf('07.pdf')">
         <div class="pdf-thumb pdf-thumb--image">
           <img class="pdf-thumb-img" src="thumbnail7.jpg" alt="Wedding Album — Vol 3" loading="lazy" decoding="async" fetchpriority="low">
           <div class="pdf-badge">PDF</div>
@@ -1260,7 +1271,7 @@
         </div>
       </div>
 
-      <div class="pdf-card" onclick="openPdf('Wedding Album — Vol 4', '08.pdf')" onmouseenter="prefetchPdf('08.pdf')" ontouchstart="prefetchPdf('08.pdf')">
+      <div class="pdf-card" role="button" tabindex="0" onclick="openPdf('Wedding Album — Vol 4', '08.pdf')" onmouseenter="prefetchPdf('08.pdf')" ontouchstart="prefetchPdf('08.pdf')">
         <div class="pdf-thumb pdf-thumb--image">
           <img class="pdf-thumb-img" src="thumbnail8.jpg" alt="Wedding Album — Vol 1" loading="lazy" decoding="async" fetchpriority="low">
           <div class="pdf-badge">PDF</div>
@@ -1323,18 +1334,18 @@
       <img src="11.jpg" alt="Social Media Content 11" loading="lazy" decoding="async" fetchpriority="low" onclick="openPhotoPreview('11.jpg')" />
       <img src="12.jpg" alt="Social Media Content 12" loading="lazy" decoding="async" fetchpriority="low" onclick="openPhotoPreview('12.jpg')" />
 
-      <img src="1.jpg" alt="Social Media Content 01" loading="lazy" decoding="async" fetchpriority="low" onclick="openPhotoPreview('1.jpg')" />
-      <img src="2.jpg" alt="Social Media Content 02" loading="lazy" decoding="async" fetchpriority="low" onclick="openPhotoPreview('2.jpg')" />
-      <img src="3.jpg" alt="Social Media Content 03" loading="lazy" decoding="async" fetchpriority="low" onclick="openPhotoPreview('3.jpg')" />
-      <img src="4.jpg" alt="Social Media Content 04" loading="lazy" decoding="async" fetchpriority="low" onclick="openPhotoPreview('4.jpg')" />
-      <img src="5.jpg" alt="Social Media Content 05" loading="lazy" decoding="async" fetchpriority="low" onclick="openPhotoPreview('5.jpg')" />
-      <img src="6.jpg" alt="Social Media Content 06" loading="lazy" decoding="async" fetchpriority="low" onclick="openPhotoPreview('6.jpg')" />
-      <img src="7.jpg" alt="Social Media Content 07" loading="lazy" decoding="async" fetchpriority="low" onclick="openPhotoPreview('7.jpg')" />
-      <img src="8.jpg" alt="Social Media Content 08" loading="lazy" decoding="async" fetchpriority="low" onclick="openPhotoPreview('8.jpg')" />
-      <img src="9.jpg" alt="Social Media Content 09" loading="lazy" decoding="async" fetchpriority="low" onclick="openPhotoPreview('9.jpg')" />
-      <img src="10.jpg" alt="Social Media Content 10" loading="lazy" decoding="async" fetchpriority="low" onclick="openPhotoPreview('10.jpg')" />
-      <img src="11.jpg" alt="Social Media Content 11" loading="lazy" decoding="async" fetchpriority="low" onclick="openPhotoPreview('11.jpg')" />
-      <img src="12.jpg" alt="Social Media Content 12" loading="lazy" decoding="async" fetchpriority="low" onclick="openPhotoPreview('12.jpg')" />
+      <img src="1.jpg" alt="" aria-hidden="true" loading="lazy" decoding="async" fetchpriority="low" onclick="openPhotoPreview('1.jpg')" />
+      <img src="2.jpg" alt="" aria-hidden="true" loading="lazy" decoding="async" fetchpriority="low" onclick="openPhotoPreview('2.jpg')" />
+      <img src="3.jpg" alt="" aria-hidden="true" loading="lazy" decoding="async" fetchpriority="low" onclick="openPhotoPreview('3.jpg')" />
+      <img src="4.jpg" alt="" aria-hidden="true" loading="lazy" decoding="async" fetchpriority="low" onclick="openPhotoPreview('4.jpg')" />
+      <img src="5.jpg" alt="" aria-hidden="true" loading="lazy" decoding="async" fetchpriority="low" onclick="openPhotoPreview('5.jpg')" />
+      <img src="6.jpg" alt="" aria-hidden="true" loading="lazy" decoding="async" fetchpriority="low" onclick="openPhotoPreview('6.jpg')" />
+      <img src="7.jpg" alt="" aria-hidden="true" loading="lazy" decoding="async" fetchpriority="low" onclick="openPhotoPreview('7.jpg')" />
+      <img src="8.jpg" alt="" aria-hidden="true" loading="lazy" decoding="async" fetchpriority="low" onclick="openPhotoPreview('8.jpg')" />
+      <img src="9.jpg" alt="" aria-hidden="true" loading="lazy" decoding="async" fetchpriority="low" onclick="openPhotoPreview('9.jpg')" />
+      <img src="10.jpg" alt="" aria-hidden="true" loading="lazy" decoding="async" fetchpriority="low" onclick="openPhotoPreview('10.jpg')" />
+      <img src="11.jpg" alt="" aria-hidden="true" loading="lazy" decoding="async" fetchpriority="low" onclick="openPhotoPreview('11.jpg')" />
+      <img src="12.jpg" alt="" aria-hidden="true" loading="lazy" decoding="async" fetchpriority="low" onclick="openPhotoPreview('12.jpg')" />
     </div>
   </div>
 </section>
@@ -1364,18 +1375,18 @@ From strategic content and eye catching creatives to performance-driven marketin
       <img src="111.webp" alt="Instagram Story Content 11" loading="lazy" decoding="async" fetchpriority="low" onclick="openPhotoPreview('111.webp')" />
       <img src="112.webp" alt="Instagram Story Content 12" loading="lazy" decoding="async" fetchpriority="low" onclick="openPhotoPreview('112.webp')" />
 
-      <img src="101.webp" alt="Instagram Story Content 01" loading="lazy" decoding="async" fetchpriority="low" onclick="openPhotoPreview('101.webp')" />
-      <img src="102.webp" alt="Instagram Story Content 02" loading="lazy" decoding="async" fetchpriority="low" onclick="openPhotoPreview('102.webp')" />
-      <img src="103.webp" alt="Instagram Story Content 03" loading="lazy" decoding="async" fetchpriority="low" onclick="openPhotoPreview('103.webp')" />
-      <img src="104.webp" alt="Instagram Story Content 04" loading="lazy" decoding="async" fetchpriority="low" onclick="openPhotoPreview('104.webp')" />
-      <img src="105.webp" alt="Instagram Story Content 05" loading="lazy" decoding="async" fetchpriority="low" onclick="openPhotoPreview('105.webp')" />
-      <img src="106.webp" alt="Instagram Story Content 06" loading="lazy" decoding="async" fetchpriority="low" onclick="openPhotoPreview('106.webp')" />
-      <img src="107.webp" alt="Instagram Story Content 07" loading="lazy" decoding="async" fetchpriority="low" onclick="openPhotoPreview('107.webp')" />
-      <img src="108.webp" alt="Instagram Story Content 08" loading="lazy" decoding="async" fetchpriority="low" onclick="openPhotoPreview('108.webp')" />
-      <img src="109.webp" alt="Instagram Story Content 09" loading="lazy" decoding="async" fetchpriority="low" onclick="openPhotoPreview('109.webp')" />
-      <img src="110.webp" alt="Instagram Story Content 10" loading="lazy" decoding="async" fetchpriority="low" onclick="openPhotoPreview('110.webp')" />
-      <img src="111.webp" alt="Instagram Story Content 11" loading="lazy" decoding="async" fetchpriority="low" onclick="openPhotoPreview('111.webp')" />
-      <img src="112.webp" alt="Instagram Story Content 12" loading="lazy" decoding="async" fetchpriority="low" onclick="openPhotoPreview('112.webp')" />
+      <img src="101.webp" alt="" aria-hidden="true" loading="lazy" decoding="async" fetchpriority="low" onclick="openPhotoPreview('101.webp')" />
+      <img src="102.webp" alt="" aria-hidden="true" loading="lazy" decoding="async" fetchpriority="low" onclick="openPhotoPreview('102.webp')" />
+      <img src="103.webp" alt="" aria-hidden="true" loading="lazy" decoding="async" fetchpriority="low" onclick="openPhotoPreview('103.webp')" />
+      <img src="104.webp" alt="" aria-hidden="true" loading="lazy" decoding="async" fetchpriority="low" onclick="openPhotoPreview('104.webp')" />
+      <img src="105.webp" alt="" aria-hidden="true" loading="lazy" decoding="async" fetchpriority="low" onclick="openPhotoPreview('105.webp')" />
+      <img src="106.webp" alt="" aria-hidden="true" loading="lazy" decoding="async" fetchpriority="low" onclick="openPhotoPreview('106.webp')" />
+      <img src="107.webp" alt="" aria-hidden="true" loading="lazy" decoding="async" fetchpriority="low" onclick="openPhotoPreview('107.webp')" />
+      <img src="108.webp" alt="" aria-hidden="true" loading="lazy" decoding="async" fetchpriority="low" onclick="openPhotoPreview('108.webp')" />
+      <img src="109.webp" alt="" aria-hidden="true" loading="lazy" decoding="async" fetchpriority="low" onclick="openPhotoPreview('109.webp')" />
+      <img src="110.webp" alt="" aria-hidden="true" loading="lazy" decoding="async" fetchpriority="low" onclick="openPhotoPreview('110.webp')" />
+      <img src="111.webp" alt="" aria-hidden="true" loading="lazy" decoding="async" fetchpriority="low" onclick="openPhotoPreview('111.webp')" />
+      <img src="112.webp" alt="" aria-hidden="true" loading="lazy" decoding="async" fetchpriority="low" onclick="openPhotoPreview('112.webp')" />
     </div>
   </div>
 </section>
@@ -1461,22 +1472,17 @@ From strategic content and eye catching creatives to performance-driven marketin
         </div>
       </div>
       <div class="footer-col">
-        <h4>Services</h4>
-        <span class="text-item">Wedding Photography</span>
-        <span class="text-item">Portrait Sessions</span>
-        <span class="text-item">Corporate Shoots</span>
-        <span class="text-item">Album Designing</span>
-        <span class="text-item">Event Coverage</span>
-        <span class="text-item">Commercials</span>
+        <h4>Album Studio</h4>
+        <span class="text-item">Wedding Album Design</span>
+        <span class="text-item">Engagement &amp; Outdoor Albums</span>
+        <span class="text-item">Portrait Photobooks</span>
+        <span class="text-item">Creative Layouts</span>
+        <a class="text-item" href="index.html" style="color:inherit;text-decoration:underline;">&larr; Back to The Brotherhood Creatives</a>
       </div>
     </div>
     <div class="footer-bottom">
       <span>© 2026 The Brotherhood Creatives. All rights reserved.</span>
-      <div class="footer-bottom-links">
-        <a href="#">Privacy Policy</a>
-        <a href="#">Terms</a>
-        <a href="#">Sitemap</a>
-      </div>
+      <div class="footer-bottom-links"><a href="index.html">Main website</a></div>
     </div>
   </div>
 </footer>
@@ -1516,12 +1522,14 @@ From strategic content and eye catching creatives to performance-driven marketin
     const btn = document.getElementById('hamburger');
     links.classList.toggle('open');
     btn.classList.toggle('open');
+    btn.setAttribute('aria-expanded', btn.classList.contains('open'));
   }
   function closeMenu() {
     const links = document.getElementById('navLinks');
     const btn = document.getElementById('hamburger');
     links.classList.remove('open');
     btn.classList.remove('open');
+    btn.setAttribute('aria-expanded', 'false');
   }
   // Close menu when clicking outside
   document.addEventListener('click', function(e) {
@@ -1630,6 +1638,13 @@ From strategic content and eye catching creatives to performance-driven marketin
     const loader = document.getElementById('photoModalLoader');
     if (loader) loader.classList.remove('show');
     this.style.opacity = '1';
+  });
+
+  // Keyboard activation for role="button" cards
+  document.addEventListener('keydown', e => {
+    if ((e.key === 'Enter' || e.key === ' ') && e.target.matches('.pdf-card, .carousel-item')) {
+      e.preventDefault(); e.target.click();
+    }
   });
 
   // Escape key structural viewport listener

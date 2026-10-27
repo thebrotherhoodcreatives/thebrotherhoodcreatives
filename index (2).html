@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>The Brotherhood Creatives | Social Media, Reels &amp; Brand Content Agency</title>
+<meta name="description" content="The Brotherhood Creatives is a creative branding and digital content agency: Instagram reels, promotional videos, social media posts and brand-focused design." />
+<link rel="canonical" href="https://thebrotherhoodcreatives.in/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="The Brotherhood Creatives" />
+<meta property="og:title" content="The Brotherhood Creatives | Creative Branding &amp; Digital Content" />
+<meta property="og:description" content="Reels, promotional videos and social media content that strengthen your brand's digital presence." />
+<meta property="og:url" content="https://thebrotherhoodcreatives.in/" />
+<meta property="og:image" content="https://thebrotherhoodcreatives.in/1.jpg" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+{"@type":"WebSite","@id":"https://thebrotherhoodcreatives.in/#website","url":"https://thebrotherhoodcreatives.in/","name":"The Brotherhood Creatives"},
+{"@type":"Organization","@id":"https://thebrotherhoodcreatives.in/#org","name":"The Brotherhood Creatives","url":"https://thebrotherhoodcreatives.in/","logo":"https://thebrotherhoodcreatives.in/logo.jpeg","email":"thebrotherhoodcreatives@gmail.com","sameAs":["https://www.instagram.com/thebrotherhoodcreatives"]}]}
+</script>
+<style>
+@font-face{font-family:'Acier BAT';src:url('AcierDisplay-Solid.woff') format('woff');font-display:swap}
+@font-face{font-family:'Timberline';src:url('FontsFree-Net-Timberline.ttf') format('truetype');font-display:swap}
+:root{--ink:#ffffff;--panel:#f4f4f4;--line:rgba(0,0,0,.1);--ivory:#000000;--muted:#5a5853;--gold:#000000}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{font-family:'DM Sans',sans-serif;background:var(--ink);color:var(--ivory);line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.wrap{max-width:1240px;margin:0 auto;padding:0 32px}
+h1,h2,h3{font-family:'Cormorant Garamond',serif;font-weight:300;line-height:1.08}
+h2{font-size:clamp(34px,4.6vw,56px);margin-bottom:20px}
+.lead{color:var(--ivory);max-width:60ch;font-size:16px}
+section{padding:110px 0}
+.btn{display:inline-block;font-size:14px;font-weight:500;padding:14px 28px;border:1px solid var(--ivory);text-decoration:none;transition:background .2s,color .2s,border-color .2s;cursor:pointer;background:none;color:var(--ivory)}
+.btn:hover{background:var(--ivory);color:var(--ink)}
+.btn.gold{background:var(--gold);border-color:var(--gold);color:var(--ink)}
+.btn.gold:hover{background:var(--ink);color:var(--ivory);border-color:var(--ivory)}
+
+/* nav */
+header{position:fixed;inset:0 0 auto;z-index:50;background:rgba(255,255,255,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:72px}
+.brand{font-family:'Acier BAT',serif;font-size:24px;text-decoration:none;letter-spacing:.01em}
+.nav ul{display:flex;gap:28px;list-style:none;align-items:center}
+.nav ul a{text-decoration:none;font-size:14px;color:var(--muted);transition:color .2s}
+.nav ul a:hover{color:var(--ivory)}
+.nav ul a.album{color:var(--gold);border:1px solid var(--gold);padding:8px 16px}
+.nav ul a.album:hover{background:var(--gold);color:var(--ink)}
+.burger{display:none;background:none;border:0;padding:8px;cursor:pointer}
+.burger span{display:block;width:24px;height:2px;background:var(--ivory);margin:5px 0;transition:transform .25s,opacity .25s}
+.burger[aria-expanded=true] span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.burger[aria-expanded=true] span:nth-child(2){opacity:0}
+.burger[aria-expanded=true] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+
+/* hero */
+.hero{padding:150px 0 90px}
+.hero .wrap{display:grid;grid-template-columns:1.25fr .75fr;gap:64px;align-items:center}
+.hero h1{font-size:clamp(48px,7vw,104px);margin-bottom:28px;position:relative;top:-60px}
+.hero h1 span{display:block}
+.hero h1 span:nth-child(2){padding-left:.9em}
+.hero h1 b{font-weight:400;font-style:normal}
+.hero h1 .ac{font-family:'Acier BAT',sans-serif}
+.hero h1 .tl{font-family:'Timberline',cursive}
+.hero p{color:var(--ivory);max-width:50ch;margin-bottom:36px;font-size:17px}
+.cta{display:flex;gap:14px;flex-wrap:wrap}
+.hero-reels{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.hero-reels img{width:100%;aspect-ratio:9/16;object-fit:cover;background:var(--panel)}
+.hero-reels img:nth-child(3){grid-column:1/-1;aspect-ratio:1/1;margin-top:0}
+
+/* services */
+.services li{list-style:none;display:grid;grid-template-columns:1fr 1.2fr;gap:40px;padding:30px 0;border-top:1px solid var(--line)}
+.services li:last-child{border-bottom:1px solid var(--line)}
+.services h3{font-size:30px;font-weight:400}
+.services p{color:var(--ivory)}
+
+/* work */
+.work-layout{display:grid;grid-template-columns:1.6fr 1fr;gap:64px;align-items:start}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.work-text h2{margin-bottom:20px}
+.tile{border:0;padding:0;background:var(--panel);cursor:zoom-in;overflow:hidden}
+.tile img{width:100%;aspect-ratio:4/5;object-fit:cover;transition:transform .5s}
+.tile:hover img{transform:scale(1.04)}
+
+/* reels */
+.reels{background:var(--panel)}
+.loop{overflow:hidden;margin-top:28px;padding:20px 0 34px}
+.track{display:flex;gap:16px;width:max-content;animation:slide 40s linear infinite}
+.loop.paused .track,.loop:has(.reel:focus-visible) .track{animation-play-state:paused}
+@media(hover:hover){.loop:hover .track{animation-play-state:paused}}
+@keyframes slide{to{transform:translateX(calc(-50% - 8px))}}
+.reel{flex:0 0 clamp(190px,22vw,260px);border:0;padding:0;background:#e4e4e4;cursor:pointer;overflow:hidden;border-radius:20px;box-shadow:0 6px 16px rgba(0,0,0,.18)}
+.reel img,.reel video{display:block;width:100%;aspect-ratio:9/16;object-fit:cover}
+
+/* process */
+.steps{display:grid;grid-template-columns:repeat(5,1fr);gap:28px;margin-top:56px;counter-reset:s;list-style:none}
+.steps li{counter-increment:s;border-top:1px solid var(--gold);padding-top:20px}
+.steps li::before{content:counter(s,decimal-leading-zero);font-family:'Cormorant Garamond',serif;font-size:30px;color:var(--gold)}
+.steps h3{font-size:24px;font-weight:400;margin:6px 0 8px}
+.steps p{color:var(--ivory);font-size:14px}
+
+/* about + contact */
+.about .wrap{display:grid;grid-template-columns:1fr 1fr;gap:64px}
+.about p+p{margin-top:16px}
+.about p{color:var(--ivory)}
+.contact{text-align:center;border-top:1px solid var(--line)}
+.contact h2{font-size:clamp(40px,6vw,80px)}
+.contact .cta{justify-content:center;margin-top:36px}
+.contact .lead{margin:0 auto}
+
+/* footer */
+footer{border-top:1px solid var(--line);padding:64px 0 32px;color:var(--ivory);font-size:14px}
+.fgrid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:48px}
+footer h4{color:var(--ivory);font-weight:500;margin-bottom:14px;font-size:15px}
+footer ul{list-style:none}
+footer li{margin-bottom:8px}
+footer a{text-decoration:none}
+footer a:hover{color:var(--ivory)}
+.studio{display:block;margin-top:48px;padding:22px 26px;border:1px solid var(--gold);color:var(--gold);font-family:'Cormorant Garamond',serif;font-size:24px;transition:background .2s,color .2s}
+.studio:hover{background:var(--gold);color:var(--ink)}
+.copy{margin-top:32px;padding-top:20px;border-top:1px solid var(--line);font-size:13px}
+
+dialog{background:none;border:0;max-width:94vw;max-height:94vh;margin:auto}
+dialog::backdrop{background:rgba(0,0,0,.88)}
+dialog img{max-height:92vh;width:auto;margin:0 auto}
+#vb{padding:0;overflow:visible}
+.vwrap{position:relative;width:min(92vw,calc(88vh*9/16))}
+#vbVideo{display:block;width:100%;aspect-ratio:9/16;object-fit:contain;background:#000;cursor:pointer}
+.vbtn{position:absolute;top:10px;border:0;background:rgba(0,0,0,.65);color:#fff;font:500 13px 'DM Sans',sans-serif;padding:8px 14px;border-radius:999px;cursor:pointer}
+#vbMute{right:10px}
+#vbClose{left:10px}
+
+@media(max-width:960px){
+  .work-layout{grid-template-columns:1fr;gap:32px}
+  .work-text{order:-1}
+  section{padding:80px 0}
+  .burger{display:block}
+  .nav ul{position:absolute;inset:72px 0 auto;flex-direction:column;align-items:flex-start;gap:0;background:var(--ink);padding:8px 32px 20px;border-bottom:1px solid var(--line);display:none}
+  .nav ul.open{display:flex}
+  .nav ul li{width:100%;padding:12px 0}
+  .hero .wrap,.about .wrap,.services li{grid-template-columns:1fr;gap:28px}
+  .steps{grid-template-columns:1fr 1fr}
+  .fgrid{grid-template-columns:1fr 1fr}
+  .fgrid>div:first-child{grid-column:1/-1}
+}
+@media(max-width:560px){
+  .wrap{padding:0 20px}
+  .steps,.fgrid{grid-template-columns:1fr}
+  .grid{gap:8px}
+  .hero{padding-top:120px}
+}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+@media(prefers-reduced-motion:reduce){.track{animation:none}.loop{overflow-x:auto}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="/">The Brotherhood Creatives</a>
+    <button class="burger" id="burger" aria-label="Toggle menu" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
+    <ul id="menu">
+      <li><a href="#top"><b>Home</b></a></li>
+      <li><a href="#services"><b>Our Services</b></a></li>
+      <li><a href="#work"><b>Our Work</b></a></li>
+      <li><a href="#about"><b>About Us</b></a></li>
+      <li><a href="#contact"><b>Contact</b></a></li>
+      <li><a class="album" href="album-design.html"><b>Wedding Album Design</b></a></li>
+    </ul>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <h1><span><b class="ac">Turning</b></span><span><b class="tl">Stories</b></span><span><b class="ac">Into</b> <b class="tl">Legacy.</b></span></h1>
+      <p>Creating strategic branding and expressive digital marketing for businesses that want to mean something beyond the moment.</p>
+      <div class="cta">
+        <a class="btn gold" href="#work">Explore Our Work</a>
+        <a class="btn" href="#contact">Let's Work Together</a>
+      </div>
+    </div>
+    <div class="hero-reels" aria-hidden="true">
+      <img src="S1.jpg" alt="" fetchpriority="high" decoding="async" />
+      <img src="S2.jpg" alt="" decoding="async" />
+      <img src="Post.jpg" alt="" decoding="async" />
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="wrap">
+    <h2>What we do</h2>
+    <p class="lead">From branding to photography,We craft identities, design experiences, and capture stories through a distinct creative lens.</p>
+    <ul class="services" style="margin-top:48px">
+      <li><h3>The art of branding</h3><p>From thoughtful logos to signature colour palettes, we shape visual identities that feel authentic, intentional, and memorable.</p></li>
+      <li><h3>Stories in Motion</h3><p>We turn ideas into compelling visual stories through promotional videos, creative brand films, and engaging content designed to capture attention.</p></li>
+      <li><h3>Social media films</h3><p>transforming raw footage into refined, engaging content through thoughtful editing, dynamic visuals, and seamless storytelling distinctly crafted for the digital space.</p></li>
+      <li><h3>Digital creative designs</h3><p>making every pose count through distinctive digital creatives that bring ideas to life and strengthen brand identity.</p></li>
+      <li><h3>Digital presence and growth</h3><p>managing your brand's digital presence through thoughtful content planning, consistent publishing, and a cohesive visual identity that keeps your audience always connected.</p></li>
+      <li><h3>Digital advertising and meta ads</h3><p>creating and managing targeted advertising campaigns across Meta platforms, by combining creative storytelling and strategic audience targeting to help brands reach the right people.</p></li>
+    </ul>
+  </div>
+</section>
+   
+<section id="work" style="padding-top:0">
+  <div class="wrap work-layout">
+    <div class="grid" id="posts"></div>
+    <div class="work-text">
+      <h2><br><br>Brands we've worked with</h2>
+      <p class="lead">Unveil the details by taking a closer look at our  collaboration.<br><br>The place where you can turn inspiration into distinctive visual experiences, bringing together imagination, intention, and an eye for detail because ideas deserve extraordinary expression.<br><br>By blending creative instinct with strategic thinking to craft work that feels authentic, looks exceptional, and connects with the right audience  to make you stand unique.<br><br>We thoughtfully imagine and beautifully realise every project with a fresh perspective, shaping it into meaningful creative work that reflects individuality and leaves a lasting impression.</p>
+    </div>
+  </div>
+</section>
+
+<section class="reels" id="reels">
+  <div class="wrap">
+    <h2>Video showcase</h2>
+    <p class="lead">creating content that captures attention and holds it. Tap to experience</p>
+  </div>
+  <div class="loop" id="loop"><div class="track" id="stories"></div></div>
+</section>
+
+<section id="process">
+  <div class="wrap">
+    <h2>Our creative process</h2>
+    <ol class="steps">
+      <li><h3>Understand</h3><p>We learn about your brand, audience and what you want the content to achieve.</p></li>
+      <li><h3>Plan</h3><p>We map out the content and creative direction before anything is made.</p></li>
+      <li><h3>Produce</h3><p>We shoot the videos and design the posts, reels and stories.</p></li>
+      <li><h3>Refine</h3><p>We edit, review and adjust until the work is right.</p></li>
+      <li><h3>Deliver</h3><p>We hand over the content and support your ongoing social media activity.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="wrap">
+    <h2>About The Brotherhood Creatives</h2>
+    <div>
+      <p>The Brotherhood Creatives is a creative partner for businesses that want professional visual content and a consistent digital presence.</p>
+      <p>We work across video, design and social media, so your brand speaks in one voice on every post, reel and story.</p>
+      <!-- Add your real company story here when ready. -->
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <h2>Let's Build Something Great Together.</h2>
+    <p class="lead">Tell us about your brand and what you'd like to create. We'll get back to you by email.</p>
+    <div class="cta">
+      <a class="btn gold" href="https://mail.google.com/mail/?view=cm&fs=1&to=thebrotherhoodcreatives@gmail.com" target="_blank" rel="noopener noreferrer">Email us</a>
+      <a class="btn" href="https://www.instagram.com/thebrotherhoodcreatives?igsh=MTlyZms5amhxMWFkaw==" target="_blank" rel="noopener noreferrer">Message on Instagram</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="fgrid">
+      <div>
+        <a class="brand" href="/" style="color:var(--ivory)">The Brotherhood Creatives</a>
+        <p style="margin-top:12px;max-width:42ch">A creative branding and digital-content agency for reels, promotional videos and social media content.</p>
+      </div>
+      <div>
+        <h4><b>Explore</b></h4>
+        <ul>
+          <li><a href="#services">Our Services</a></li>
+          <li><a href="#work">Our Work</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4><b>Connect</b></h4>
+        <ul>
+          <li><a href="https://www.instagram.com/thebrotherhoodcreatives?igsh=MTlyZms5amhxMWFkaw==" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+          <li><a href="mailto:thebrotherhoodcreatives@gmail.com">thebrotherhoodcreatives@gmail.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <a class="studio" href="album-design.html">Looking for Wedding Album Design? Explore Our Album Studio →</a>
+    <p class="copy">© 2026 The Brotherhood Creatives. All rights reserved.</p>
+  </div>
+</footer>
+
+<dialog id="lb" aria-label="Enlarged image"><img id="lbImg" alt="" /></dialog>
+<dialog id="vb" aria-label="Reel player">
+  <div class="vwrap">
+    <video id="vbVideo" playsinline muted loop></video>
+    <button class="vbtn" id="vbClose" type="button">&#10005; Close</button>
+    <button class="vbtn" id="vbMute" type="button">Unmute</button>
+  </div>
+</dialog>
+
+<script>
+(function(){
+  var menu=document.getElementById('menu'),b=document.getElementById('burger');
+  function setMenu(o){menu.classList.toggle('open',o);b.setAttribute('aria-expanded',o)}
+  b.addEventListener('click',function(){setMenu(!menu.classList.contains('open'))});
+  menu.addEventListener('click',function(e){if(e.target.closest('a'))setMenu(false)});
+
+  var lb=document.getElementById('lb'),lbImg=document.getElementById('lbImg');
+  function show(src,alt){lbImg.src=src;lbImg.alt=alt||'';lb.showModal()}
+  lb.addEventListener('click',function(){lb.close()});
+
+  // Posts: 1.jpg-12.jpg (existing files). Edit alt text to describe each design.
+  var posts=document.getElementById('posts');
+  for(var i=51;i<=59;i++){
+    var t=document.createElement('button');t.className='tile';t.type='button';
+    t.innerHTML='<img src="'+i+'.jpg" alt="Social media creative '+i+' by The Brotherhood Creatives" loading="lazy" decoding="async">';
+    t.addEventListener('click',(function(n){return function(){show(n+'.jpg','Social media creative '+n)}})(i));
+    posts.appendChild(t);
+  }
+
+  // ---- Reels loop ----
+  // One entry per reel. poster = thumbnail, video = file next to index.html ('' = image only)
+  var reels=[
+    {video:'reel-01.mp4'},
+    {video:'reel-02.mp4'},
+    {video:'reel-03.mp4'},
+    {video:'reel-04.mp4'},
+    {video:'reel-05.mp4'},
+    {video:'reel-06.mp4'},
+    {video:'reel-07.mp4'},
+    {video:'reel-08.mp4'},
+    {video:'reel-09.mp4'},
+    {video:'reel-10.mp4'},
+    {video:'reel-11.mp4'},
+    {video:'reel-12.mp4'}
+  ];
+  var stories=document.getElementById('stories'),loop=document.getElementById('loop');
+  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var visible=new Set(),hovering=false,modalOpen=false,inView=false;
+
+  function build(clone){
+    reels.forEach(function(d,i){
+      var b=document.createElement('button');b.type='button';b.className='reel';
+      b.setAttribute('aria-label','Open reel '+(i+1));
+      if(clone){b.setAttribute('aria-hidden','true');b.tabIndex=-1}
+      if(d.video){
+        var v=document.createElement('video');
+        v.muted=true;v.loop=true;v.playsInline=true;v.preload='none';v.poster=d.poster;
+        v.setAttribute('muted','');v.setAttribute('playsinline','');
+        v.dataset.src=d.video;
+        b.appendChild(v);
+      }else{
+        var im=document.createElement('img');
+        im.src=d.poster;im.alt='';im.loading='lazy';im.decoding='async';
+        b.appendChild(im);
+      }
+      b.addEventListener('click',function(){
+        d.video?openVideo(d):show(d.poster,'Instagram story creative '+(i+1));
+      });
+      stories.appendChild(b);
+    });
+  }
+  build(false);build(true); // second copy makes the loop seamless
+
+  function playV(v){
+    if(reduce||hovering||modalOpen||!inView)return;
+    if(!v.getAttribute('src'))v.src=v.dataset.src; // video downloads only now
+    var p=v.play();if(p)p.catch(function(){});
+  }
+  function pauseAll(){visible.forEach(function(v){v.pause()})}
+  function resume(){visible.forEach(playV)}
+
+  // only reels currently visible in the strip play
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(e){
+      var v=e.target.querySelector('video');if(!v)return;
+      if(e.isIntersecting){visible.add(v);playV(v)}else{visible.delete(v);v.pause()}
+    });
+  },{root:loop,threshold:.4});
+  stories.querySelectorAll('.reel').forEach(function(r){io.observe(r)});
+
+  // pause everything when the strip is scrolled off screen
+  new IntersectionObserver(function(es){
+    inView=es[0].isIntersecting;inView?resume():pauseAll();
+  }).observe(loop);
+
+  // mouse hover stops the loop and the videos; leaving continues them
+  loop.addEventListener('pointerenter',function(e){if(e.pointerType==='mouse'){hovering=true;pauseAll()}});
+  loop.addEventListener('pointerleave',function(e){if(e.pointerType==='mouse'){hovering=false;resume()}});
+
+  // popup player: starts muted, Unmute button at the top right
+  var vb=document.getElementById('vb'),vbV=document.getElementById('vbVideo'),vbM=document.getElementById('vbMute');
+  function setMuteBtn(){vbM.textContent=vbV.muted?'Unmute':'Mute';vbM.setAttribute('aria-label',vbM.textContent)}
+  function openVideo(d){
+    modalOpen=true;pauseAll();loop.classList.add('paused');
+    vbV.src=d.video;vbV.poster=d.poster;vbV.muted=true;setMuteBtn();
+    vb.showModal();
+    var p=vbV.play();if(p)p.catch(function(){});
+  }
+  vbM.addEventListener('click',function(e){e.stopPropagation();vbV.muted=!vbV.muted;setMuteBtn()});
+  vbV.addEventListener('click',function(){vbV.paused?vbV.play():vbV.pause()});
+  document.getElementById('vbClose').addEventListener('click',function(){vb.close()});
+  vb.addEventListener('click',function(e){if(e.target===vb)vb.close()});
+  vb.addEventListener('close',function(){
+    vbV.pause();vbV.removeAttribute('src');vbV.load();
+    modalOpen=false;loop.classList.remove('paused');resume();
+  });
+})();
+</script>
+</body>
+</html>
