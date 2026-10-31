@@ -3,13 +3,14 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>The Brotherhood Creatives | Social Media, Reels &amp; Brand Content Agency</title>
-<meta name="description" content="The Brotherhood Creatives is a creative branding and digital content agency: Instagram reels, promotional videos, social media posts and brand-focused design." />
+<title>The Brotherhood Creatives | Digital Marketing, Reels &amp; Brand Content Agency</title>
+<meta name="description" content="The Brotherhood Creatives is a creative branding and digital marketing agency: Instagram reels, promotional videos, social media management and Meta ads." />
 <link rel="canonical" href="https://thebrotherhoodcreatives.in/" />
+<link rel="icon" href="favicon.png" type="image/png" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="The Brotherhood Creatives" />
-<meta property="og:title" content="The Brotherhood Creatives | Creative Branding &amp; Digital Content" />
-<meta property="og:description" content="Reels, promotional videos and social media content that strengthen your brand's digital presence." />
+<meta property="og:title" content="The Brotherhood Creatives | Digital Marketing &amp; Creative Branding" />
+<meta property="og:description" content="Reels, promotional videos, social media management and Meta ads that strengthen your brand's digital presence." />
 <meta property="og:url" content="https://thebrotherhoodcreatives.in/" />
 <meta property="og:image" content="https://thebrotherhoodcreatives.in/1.jpg" />
 <meta name="twitter:card" content="summary_large_image" />
@@ -148,10 +149,14 @@ dialog img{max-height:92vh;width:auto;margin:0 auto}
   .wrap{padding:0 20px}
   .steps,.fgrid{grid-template-columns:1fr}
   .grid{gap:8px}
-  .hero{padding-top:120px}
+  .hero{padding-top:150px}
+  .hero h1{top:-10px;margin-bottom:20px}
+  .hero p{font-size:16px;margin-bottom:28px}
 }
 @media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
 @media(prefers-reduced-motion:reduce){.track{animation:none}.loop{overflow-x:auto}}
+#vb.loading .vwrap::after{content:"";position:absolute;left:50%;top:50%;width:38px;height:38px;margin:-19px;border:3px solid rgba(255,255,255,.35);border-top-color:#fff;border-radius:50%;animation:spin .8s linear infinite;pointer-events:none}
+@keyframes spin{to{transform:rotate(360deg)}}
 </style>
 </head>
 <body>
@@ -313,7 +318,7 @@ dialog img{max-height:92vh;width:auto;margin:0 auto}
 
   // ---- Reels loop ----
   // One entry per reel. poster = thumbnail, video = file next to index.html ('' = image only)
-  var reels=[
+      var reels=[
     {video:'reel-01.mp4'},
     {video:'reel-02.mp4'},
     {video:'reel-03.mp4'},
@@ -338,9 +343,10 @@ dialog img{max-height:92vh;width:auto;margin:0 auto}
       if(clone){b.setAttribute('aria-hidden','true');b.tabIndex=-1}
       if(d.video){
         var v=document.createElement('video');
-        v.muted=true;v.loop=true;v.playsInline=true;v.preload='none';v.poster=d.poster;
+        v.muted=true;v.loop=true;v.playsInline=true;v.preload='metadata';
         v.setAttribute('muted','');v.setAttribute('playsinline','');
-        v.dataset.src=d.video;
+        v.dataset.src=d.preview||d.video;
+        v.src=(d.preview||d.video)+'#t=0.5';
         b.appendChild(v);
       }else{
         var im=document.createElement('img');
@@ -384,12 +390,18 @@ dialog img{max-height:92vh;width:auto;margin:0 auto}
   // popup player: starts muted, Unmute button at the top right
   var vb=document.getElementById('vb'),vbV=document.getElementById('vbVideo'),vbM=document.getElementById('vbMute');
   function setMuteBtn(){vbM.textContent=vbV.muted?'Unmute':'Mute';vbM.setAttribute('aria-label',vbM.textContent)}
-  function openVideo(d){
+    function openVideo(d){
     modalOpen=true;pauseAll();loop.classList.add('paused');
-    vbV.src=d.video;vbV.poster=d.poster;vbV.muted=true;setMuteBtn();
+    vbV.preload='auto';
+    if(d.poster)vbV.poster=d.poster;else vbV.removeAttribute('poster');
+    vbV.muted=true;setMuteBtn();
+    vb.classList.add('loading');
+    vbV.src=d.video;
     vb.showModal();
     var p=vbV.play();if(p)p.catch(function(){});
   }
+  vbV.addEventListener('playing',function(){vb.classList.remove('loading')});
+  vbV.addEventListener('error',function(){vb.classList.remove('loading')});
   vbM.addEventListener('click',function(e){e.stopPropagation();vbV.muted=!vbV.muted;setMuteBtn()});
   vbV.addEventListener('click',function(){vbV.paused?vbV.play():vbV.pause()});
   document.getElementById('vbClose').addEventListener('click',function(){vb.close()});
